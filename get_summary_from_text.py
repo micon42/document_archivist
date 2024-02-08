@@ -69,8 +69,10 @@ if __name__ == "__main__":
     text = data["text"]
 
     # replace names
-    text = text.replace("example", "abcdef")
-    text = text.replace("example", "abcdef")
+    text = text.replace("example1", "abcdef1")
+    text = text.replace("example2", "abcdef2")
+    text = text.replace("example3", "abcdef3")
+    text = text.replace("example4", "abcdef4")
 
     out_json = get_summary(text)
 
@@ -78,8 +80,10 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # undo replaced names
-    out_json = out_json.replace("abcdef", "example")
-    out_json = out_json.replace("abcdef", "example")
+    out_json = out_json.replace("abcdef1", "example1")
+    out_json = out_json.replace("abcdef2", "example2")
+    out_json = out_json.replace("abcdef3", "example3")
+    out_json = out_json.replace("abcdef4", "example4")
 
     out_file, _ = os.path.splitext(input_name)
     out_file = out_file + "_summary.json"
