@@ -11,7 +11,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 def get_response(prompt):
     gpt_response = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt}],
-        model="gpt-4-1106-preview",
+        model="gpt-4o",
         response_format={"type": "json_object"},
         temperature=0.2,
     )
